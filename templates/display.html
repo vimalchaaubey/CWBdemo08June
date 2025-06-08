@@ -22,7 +22,21 @@
             <p><strong>Institute / University Name:</strong> {{ data.institute }}</p>
             <p><strong>Branch:</strong> {{ data.branch }}</p>
             <p><strong>Year:</strong> {{ data.year }}</p>
+            <p><strong>Team Name:</strong> {{ data.team_name }}</p>
+            <p><strong>Team Size:</strong> {{ data.team_size }}</p>
             <p><strong>Selected Problem Statement:</strong> {{ data.problem }}</p>
+            <h3>Team Members</h3>
+            <ol>
+            {% for member in data.members %}
+                <li>
+                    <strong>Name:</strong> {{ member.name }}<br>
+                    <strong>Email Id:</strong> {{ member.email }}<br>
+                    <strong>Institute / University Name:</strong> {{ member.institute }}<br>
+                    <strong>Branch:</strong> {{ member.branch }}<br>
+                    <strong>Year:</strong> {{ member.year }}
+                </li>
+            {% endfor %}
+            </ol>
         </div>
         <a href="/">Back to Registration</a>
     </div>
