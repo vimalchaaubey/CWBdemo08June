@@ -15,6 +15,7 @@ def register():
     if request.method == 'POST':
         team_name = request.form.get('team_name')
         team_size = int(request.form.get('team_size', 1))
+        state = request.form.get('state')
         members = []
         for i in range(1, team_size + 1):
             members.append({
@@ -27,6 +28,7 @@ def register():
         data = {
             'team_name': team_name,
             'team_size': team_size,
+            'state': state,
             'members': members,
             'problem': request.form.get('problem')
         }
