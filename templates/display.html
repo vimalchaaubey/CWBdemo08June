@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+        h2 { color: #007bff; }
+        .info { margin-top: 20px; }
+        .info p { margin: 8px 0; }
+        a { display: inline-block; margin-top: 20px; color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Details</h2>
+        <div class="info">
+            <p><strong>Name:</strong> {{ data.name }}</p>
+            <p><strong>Email Id:</strong> {{ data.email }}</p>
+            <p><strong>Institute / University Name:</strong> {{ data.institute }}</p>
+            <p><strong>Branch:</strong> {{ data.branch }}</p>
+            <p><strong>Year:</strong> {{ data.year }}</p>
+            <p><strong>Selected Problem Statement:</strong> {{ data.problem }}</p>
+        </div>
+        <a href="/">Back to Registration</a>
+    </div>
+</body>
+</html>
